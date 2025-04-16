@@ -1,0 +1,17 @@
+{
+  "build": {
+    "env": {
+      "TOKEN": "",
+      "PREFIX": "!",
+      "STATUS": "online",
+      "ACTIVITY_TYPE": "listening",
+      "ACTIVITY": "music",
+      "SPOTIFY_CLIENT_ID": "",
+      "SPOTIFY_CLIENT_SECRET": ""
+    },
+    "command": "pip install -r requirements.txt"
+  },
+  "start": {
+    "command": "python main.py"
+  }
+}
