@@ -1,17 +1,18 @@
-//JotaroKujo0525 note, this is a deed that i should've done a long time ago
-require('./deploy/deployGlobal'); // atau local, sesuai kebutuhan
-require('./index'); // atau file utama bot kamu
-require('dotenv').config()
+// Load environment variables dulu
+require('dotenv').config();
 
 const DiscordMusicBot = require("./lib/DiscordMusicBot");
 const { exec } = require("child_process");
 
+// Optional: Jalankan slash command deploy (pilih salah satu)
+require('./deploy/deployGlobal'); // atau gunakan deployGuild jika pakai GUILD_ID
+
 if (process.env.REPL_ID) {
-	console.log("Replit system detected, initiating special `unhandledRejection` event listener.")
+	console.log("Replit system detected, initiating special `unhandledRejection` event listener.");
 	process.on('unhandledRejection', (reason, promise) => {
 		promise.catch((err) => {
 			if (err.status === 429) {
-				console.log("something went wrong whilst trying to connect to discord gateway, resetting...");
+				console.log("Something went wrong whilst trying to connect to Discord gateway, resetting...");
 				exec("kill 1");
 			}
 		});
