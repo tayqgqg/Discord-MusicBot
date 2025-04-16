@@ -1,4 +1,6 @@
 //JotaroKujo0525 note, this is a deed that i should've done a long time ago
+require('./deploy/deployGlobal'); // atau local, sesuai kebutuhan
+require('./index'); // atau file utama bot kamu
 require('dotenv').config()
 
 const DiscordMusicBot = require("./lib/DiscordMusicBot");
