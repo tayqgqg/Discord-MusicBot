@@ -40,8 +40,8 @@ module.exports = {
 		status: "online", //- You can have online, idle, dnd and invisible (Note: invisible makes people think the bot is offline)
 		activities: [
 			{
-				name: "Music", //- Status Text
-				type: "LISTENING", //- PLAYING, WATCHING, LISTENING, STREAMING
+				name: "YouTube Ardyy🥱", //- Status Text
+				type: "WATCHING", //- PLAYING, WATCHING, LISTENING, STREAMING
 			},
 		],
 	},
